@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "policy-sets",
+    "attributes": {
+      "name": "dev-policies",
+      "description": "Development Policies",
+      "kind": "sentinel",
+      "global": false,
+      "agent-enabled": true,
+      "policy-tool-version": "0.23.0",
+      "overridable": true
+    }
+  }
+}

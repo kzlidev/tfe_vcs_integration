@@ -1,0 +1,11 @@
+{
+  "data": {
+    "type": "registry-modules",
+    "attributes": {
+      "name": "my-module",
+      "provider": "aws",
+      "registry-name": "private",
+      "no-code": true
+    }
+  }
+}
