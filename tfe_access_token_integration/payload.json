@@ -1,0 +1,12 @@
+{
+  "data": {
+    "type": "oauth-clients",
+    "attributes": {
+      "service-provider": "gitlab_hosted",
+      "http-url": "https://gitlab.com",
+      "api-url": "https://gitlab.com/api/v4",
+      "oauth-token-string": "",
+      "organization-scoped": true
+    }
+  }
+}
