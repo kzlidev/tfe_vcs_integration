@@ -5,7 +5,7 @@
       "service-provider": "gitlab_hosted",
       "http-url": "https://gitlab.com",
       "api-url": "https://gitlab.com/api/v4",
-      "oauth-token-string": "",
+      "oauth-token-string": "<gitlab_token>",
       "organization-scoped": true
     }
   }

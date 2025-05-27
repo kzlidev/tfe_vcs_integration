@@ -4,13 +4,14 @@
 
 # Token must belong to a team or team member with the Manage modules permission enabled.
 export TFE_TOKEN="<TFE_TOKEN>"
-export TFE_ORG="likz_dev"
+export TFE_ORG="likz"
+export TFE_URL="tferhel.kz-li.sbx.hashidemos.io"
 
 # List the modules in the private registry
 curl \
   --request GET \
   --header "Authorization: Bearer $TFE_TOKEN" \
-  https://app.terraform.io/api/v2/organizations/$TFE_ORG/registry-modules
+  https://$TFE_URL/api/v2/organizations/$TFE_ORG/registry-modules
 
 
 # Create a new module in the private registry
@@ -19,7 +20,7 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data @01-private-module-payload.json \
-  https://app.terraform.io/api/v2/organizations/$TFE_ORG/registry-modules
+  https://$TFE_URL/api/v2/organizations/$TFE_ORG/registry-modules
 
 # Create a new module version in the private registry
 curl \
@@ -27,7 +28,7 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data @02-private-module-version-payload.json \
-  https://app.terraform.io/api/v2/organizations/$TFE_ORG/registry-modules/private/$TFE_ORG/my-module/aws/versions > response.json
+  https://$TFE_URL/api/v2/organizations/$TFE_ORG/registry-modules/private/$TFE_ORG/my-module/aws/versions > response.json
 
 # The upload URL is for uploading the actual module
 export UPLOAD_URL=$(jq -r '.data.links.upload' response.json)

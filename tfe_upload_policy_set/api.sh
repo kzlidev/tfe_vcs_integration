@@ -3,8 +3,8 @@
 # https://developer.hashicorp.com/terraform/enterprise/api-docs/policy-sets#create-a-policy-set
 
 # Token must have permission to manage VCS Settings
-export TFE_TOKEN=""
-export TFE_ORG=""
+export TFE_TOKEN="<TFE_TOKEN>"
+export TFE_ORG="likz_dev"
 
 # Create a new policy set
 curl \
